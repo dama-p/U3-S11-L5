@@ -10,32 +10,32 @@ import Next from "../spotify-start/assets/playerbuttons/next.png";
 import Repeat from "../spotify-start/assets/playerbuttons/repeat.png";
 
 const PlayerComponent = () => {
-  let player = useSelector((state) => state.player.selectedAlbum);
-  console.log("PLAYER", player);
+  let playerAlbum = useSelector((state) => state.player.selectedAlbum);
+  console.log("PLAYER", playerAlbum);
   const dispatch = useDispatch();
   return (
     <Container fluid className="fixed-bottom bg-container pt-1">
       <Row className="h-100">
         <Col lg={10} className="offset-lg-2">
-          <Row className="h-100 align-items-center" style={{ justifyContent: player ? "" : "center" }}>
-            <Col
-              xs={4}
-              className="d-flex align-items-center justify-content-center"
-              style={{ display: player === null ? "none" : "flex" }}
-            >
-              <img src={player?.album.cover_medium} alt="" style={{ width: "70px", height: "70px" }} />
-              <Heart
-                color="white"
-                className="mx-2"
-                style={{ cursor: "pointer" }}
-                onClick={() => dispatch(addFave(player))}
-                id="likedIcon"
-              />
-              <span className="text-white" id="playerText">
-                {player?.artist.name}
-                <br />
-                {player?.title}
-              </span>
+          <Row className="h-100 align-items-center justify-content-center justify-content-lg-start">
+            <Col xs={4} className="d-flex align-items-center justify-content-center">
+              {playerAlbum !== null && (
+                <>
+                  <img src={playerAlbum?.album.cover_medium} alt="" style={{ width: "70px", height: "70px" }} />
+                  <Heart
+                    color="white"
+                    className="mx-2"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => dispatch(addFave(playerAlbum))}
+                    id="likedIcon"
+                  />
+                  <span className="text-white" id="playerText">
+                    {playerAlbum?.artist.name}
+                    <br />
+                    {playerAlbum?.title}
+                  </span>
+                </>
+              )}
             </Col>
 
             <Col xs={6} md={5} className="playerControls text-white">

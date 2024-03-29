@@ -1,10 +1,9 @@
 export const SET_SEARCH = 'SET_SEARCH'
 export const SET_PLAYER = 'SET_PLAYER'
-export const SET_ALBUM = 'SET_ALBUM'
 export const ADD_FAVE = 'ADD_FAVE'
 export const REMOVE_FAVE ='REMOVE_FAVE'
 
-const searching = (searchValue) => {
+export const setSearch = (searchValue) => {
   return async (dispatch) => {
     try {
       let res = await fetch(
@@ -27,7 +26,7 @@ const searching = (searchValue) => {
           payload: result.data,
         })
       } else {
-        throw new Error('error in search')
+        throw new Error('Error in fetching data')
       }
     } catch (err) {
       console.log('error', err)
@@ -57,4 +56,3 @@ export const removeFave = (removedSong) => {
   }
 }
 
-export default searching

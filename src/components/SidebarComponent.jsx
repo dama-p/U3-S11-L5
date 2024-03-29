@@ -1,18 +1,16 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { BookFill, HouseDoorFill } from "react-bootstrap-icons";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import Logo from "../spotify-start/assets/logo/logo.png"
-
-import searching from "../redux/action";
+import { setSearch } from "../redux/action";
 
 const SidebarComponent = () => {
-  const searchValue = useSelector((state) => state.search.searchValue);
   const dispatch = useDispatch();
   const handleSearch = (e) => {
     e.preventDefault();
     const inputValue = e.target.elements.searchField.value;
-    dispatch(searching(inputValue));
+    dispatch(setSearch(inputValue));
   };
   return (
   
@@ -57,7 +55,7 @@ const SidebarComponent = () => {
                           placeholder="Search"
                           aria-label="Search"
                           aria-describedby="basic-addon2"
-                          onChange={(e) => dispatch(searching(e.target.value))}
+                          onChange={(e) => dispatch(setSearch(e.target.value))}
                         />
                         <div className="input-group-append">
                           <Button className="btn btn-outline-secondary bg-black btn-sm h-100" type="submit">
