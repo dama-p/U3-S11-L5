@@ -52,7 +52,7 @@ const MainComponent = () => {
               id="popSection"
             >
               {' '}
-              <Albums artist="katy parry" />
+              <Albums artist="katy perry" />
             </Row>
           </div>
         </Col>
