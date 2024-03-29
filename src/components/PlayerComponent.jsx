@@ -11,6 +11,7 @@ import Repeat from "../spotify-start/assets/playerbuttons/repeat.png";
 
 const PlayerComponent = () => {
   let player = useSelector((state) => state.player.selectedAlbum);
+  console.log("PLAYER", player)
   const dispatch = useDispatch();
   return (
     <Container fluid className="fixed-bottom bg-container pt-1">
@@ -27,7 +28,7 @@ const PlayerComponent = () => {
                 color="white"
                 className="mx-2"
                 style={{ cursor: "pointer" }}
-                onClick={() => dispatch(addFave(player?.title))}
+                onClick={() => dispatch(addFave(player))}
               />
               <span className="text-white" id="playerText">{player?.artist.name}
               <br />

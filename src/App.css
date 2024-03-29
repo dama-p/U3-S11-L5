@@ -185,3 +185,11 @@ ul {
 .mainPage img {
   width: 200px !important;
 }
+
+#favouriteStyle {
+  background: rgba(255, 255, 255, 0.3);
+  width: 60%;
+  border-radius: 10px;
+  padding: 20px;
+  color: black;
+}
