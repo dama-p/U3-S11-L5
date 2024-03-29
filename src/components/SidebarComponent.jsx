@@ -43,7 +43,7 @@ const SidebarComponent = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="nav-item nav-link d-flex align-items-center" to="/">
+                      <Link className="nav-item nav-link d-flex align-items-center" to="/library">
                         <BookFill style={{ width: "24px", height: "36px" }} />
                         &nbsp; Your Library
                       </Link>

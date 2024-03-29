@@ -1,12 +1,12 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import searchReducer from '../reducers/search'
 import playerReducer from '../reducers/player'
-import likedReducer from '../reducers/liked'
+import favouritesReducer from '../reducers/favourites'
 
 const bigReducer = combineReducers({
   search: searchReducer,
   player: playerReducer,
-  liked: likedReducer,
+  favourites: favouritesReducer,
 })
 
 const store = configureStore({

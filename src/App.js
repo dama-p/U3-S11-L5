@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap"
 import SidebarComponent from './components/SidebarComponent'
 import MainComponent from './components/MainComponent'
 import PlayerComponent from './components/PlayerComponent'
+import LibraryComponent from "./components/LibraryComponent"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <SidebarComponent />
       <Routes>
         <Route path="/" element={<MainComponent />} />
+        <Route path="/library" element={<LibraryComponent / >} />
       </Routes>
       <PlayerComponent />
     </BrowserRouter>

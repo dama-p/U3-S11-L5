@@ -2,7 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Heart } from "react-bootstrap-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { setLiked } from "../redux/action";
+import { addFave } from "../redux/action";
 import Shuffle from "../spotify-start/assets/playerbuttons/shuffle.png";
 import Prev from "../spotify-start/assets/playerbuttons/prev.png";
 import Play from "../spotify-start/assets/playerbuttons/play.png";
@@ -27,7 +27,7 @@ const PlayerComponent = () => {
                 color="white"
                 className="mx-2"
                 style={{ cursor: "pointer" }}
-                onClick={() => dispatch(setLiked(player?.title))}
+                onClick={() => dispatch(addFave(player?.title))}
               />
               <span className="text-white" id="playerText">{player?.artist.name}
               <br />
