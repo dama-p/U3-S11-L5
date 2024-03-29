@@ -193,3 +193,7 @@ ul {
   padding: 20px;
   color: black;
 }
+
+#likedIcon:visited {
+  color: red;
+}
