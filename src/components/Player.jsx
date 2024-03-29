@@ -22,7 +22,7 @@ const Player = function () {
                 </div>
               </>
             </Col>
-            <Col className="col-1 col-md-1 col-lg-1 playerControls mt-1 d-flex ">
+            <Col className="playerControls mt-1 d-flex ">
               <Row className="row d-flex flex-column flex-nowrap ">
                 <div class="d-flex">
                   <a href="#">

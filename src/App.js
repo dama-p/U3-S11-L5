@@ -14,10 +14,9 @@ function App() {
     <BrowserRouter>
       <Container>
         <Row>
-          <Col lg={2}>
-            <Sidebar />
-          </Col>
-          <Col className="col-12 col-md-9 offset-md-3 mainPage">
+          <Sidebar />
+
+          <Col className="col-12 col-md-11 offset-md-2 offset-lg-3 mainPage">
             <MyNavbar />
             <Routes>
               <Route path="/" element={<MainSection />} />
