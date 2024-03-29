@@ -21,7 +21,7 @@ const PlayerComponent = () => {
             <Col
               xs={4}
               className="d-flex align-items-center justify-content-center"
-              style={{ display: player ? "flex" : "none" }}
+              style={{ display: player === null ? "none" : "flex" }}
             >
               <img src={player?.album.cover_medium} alt="" style={{ width: "70px", height: "70px" }} />
               <Heart
