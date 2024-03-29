@@ -7,7 +7,7 @@ import Albums from './Albums'
 const MainComponent = () => {
   let searchValue = useSelector((state) => state.search.searchValue)
   return (
-    <Col md={9} className="offset-md-3 mainPage">
+    <Col md={9} className="offset-3 mainPage">
       <Row>
         <Col xs={9} lg={11} className="mainLinks d-none d-md-flex">
           <Link to="/">TRENDING</Link>

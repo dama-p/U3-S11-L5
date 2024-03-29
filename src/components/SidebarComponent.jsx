@@ -16,8 +16,7 @@ const SidebarComponent = () => {
     dispatch(searching(inputValue));
   };
   return (
-    <Container fluid>
-      <Row>
+  
         <Col xs={2}>
           <nav className="navbar navbar-expand-md fixed-left justify-content-between" id="sidebar">
             <Container className="flex-column align-items-start">
@@ -85,9 +84,8 @@ const SidebarComponent = () => {
             </div>
           </nav>
         </Col>
-        <MainComponent />
-      </Row>
-    </Container>
+        
+    
   );
 };
 
