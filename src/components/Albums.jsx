@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { getAlbum, setPlayer } from "../redux/action";
+import { setPlayer } from "../redux/action";
 
 const Albums = ({ artist }) => {
-  /* const albums = useSelector((state) => state.album.results); */
   const dispatch = useDispatch();
 
   const [albumResults, setAlbumResults] = useState([]);
@@ -21,7 +20,7 @@ const Albums = ({ artist }) => {
         if (response.ok) {
           return response.json();
         } else {
-          throw new Error("Problema nel reperimento dati");
+          throw new Error("Error while fetching data");
         }
       })
 

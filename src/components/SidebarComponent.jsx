@@ -1,5 +1,4 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
-import MainComponent from "./MainComponent";
 import { Link } from "react-router-dom";
 import { BookFill, HouseDoorFill } from "react-bootstrap-icons";
 import { useDispatch, useSelector } from "react-redux";
@@ -38,13 +37,13 @@ const SidebarComponent = () => {
                 <div className="navbar-nav">
                   <ul>
                     <li>
-                      <Link className="nav-item nav-link d-flex align-items-center" href="#">
+                      <Link className="nav-item nav-link d-flex align-items-center" to="/">
                         <HouseDoorFill style={{ width: "24px", height: "36px" }} />
                         &nbsp; Home
                       </Link>
                     </li>
                     <li>
-                      <Link className="nav-item nav-link d-flex align-items-center" href="#">
+                      <Link className="nav-item nav-link d-flex align-items-center" to="/">
                         <BookFill style={{ width: "24px", height: "36px" }} />
                         &nbsp; Your Library
                       </Link>

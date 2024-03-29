@@ -3,13 +3,11 @@ import { Heart } from "react-bootstrap-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { setLiked } from "../redux/action";
-import Shuffle from "../spotify-start/assets/playerbuttons/shuffle.png"
-import Prev from "../spotify-start/assets/playerbuttons/prev.png"
-import Play from "../spotify-start/assets/playerbuttons/play.png"
-import Next from "../spotify-start/assets/playerbuttons/next.png"
-import Repeat from "../spotify-start/assets/playerbuttons/repeat.png"
-
-
+import Shuffle from "../spotify-start/assets/playerbuttons/shuffle.png";
+import Prev from "../spotify-start/assets/playerbuttons/prev.png";
+import Play from "../spotify-start/assets/playerbuttons/play.png";
+import Next from "../spotify-start/assets/playerbuttons/next.png";
+import Repeat from "../spotify-start/assets/playerbuttons/repeat.png";
 
 const PlayerComponent = () => {
   let player = useSelector((state) => state.player.selectedAlbum);
@@ -21,23 +19,25 @@ const PlayerComponent = () => {
           <Row className="h-100 align-items-center" style={{ justifyContent: player ? "" : "center" }}>
             <Col
               xs={4}
-              className=" align-items-center justify-content-center"
+              className="d-flex align-items-center justify-content-center"
               style={{ display: player ? "flex" : "none" }}
             >
               <img src={player?.album.cover_medium} alt="" style={{ width: "70px", height: "70px" }} />
               <Heart
                 color="white"
-                className="ms-2"
+                className="mx-2"
                 style={{ cursor: "pointer" }}
                 onClick={() => dispatch(setLiked(player?.title))}
               />
+              <span className="text-white" id="playerText">{player?.artist.name}
+              <br />
+              {player?.title}</span>
+              
+              
             </Col>
 
-            <Col xs={6} md={4} className="playerControls text-white">
-              <div style={{ display: player ? "block" : "none" }}>
-                <span className="mb-0 text-center">{player?.artist.name}: </span>
-                <span className="mb-0 text-center">{player?.title}</span>
-              </div>
+            <Col xs={6} md={5} className="playerControls text-white">
+              
               <div className="d-flex">
                 <Link to="/">
                   <img src={Shuffle} alt="shuffle" />
