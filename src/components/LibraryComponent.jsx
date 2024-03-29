@@ -46,4 +46,4 @@ const LibraryComponent = function () {
   );
 };
 
-export default LibraryComponent;
+export default LibraryComponent
