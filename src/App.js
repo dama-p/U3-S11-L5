@@ -1,13 +1,19 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import HomePage from './components/HomePage'
+import { Container, Row, Col } from "react-bootstrap"
+
+import SidebarComponent from './components/SidebarComponent'
+import MainComponent from './components/MainComponent'
+import PlayerComponent from './components/PlayerComponent'
 
 function App() {
   return (
     <BrowserRouter>
+    <SidebarComponent />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<MainComponent />} />
       </Routes>
+      <PlayerComponent />
     </BrowserRouter>
   )
 }
